@@ -1,0 +1,15 @@
+PODS:
+  - Alamofire (4.0.1)
+  - Unbox (2.2.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - Unbox
+
+SPEC CHECKSUMS:
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  Unbox: 03d7128ce429987986bc08d967e9d5e0da158946
+
+PODFILE CHECKSUM: 5d148354a79756228c779c2440b5e3f7ac47c8b7
+
+COCOAPODS: 1.1.1
