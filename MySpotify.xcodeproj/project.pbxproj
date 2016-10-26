@@ -19,6 +19,7 @@
 		F758CC451DC0889C0019975B /* SpotifyMetadata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F758CC421DC0889C0019975B /* SpotifyMetadata.framework */; };
 		F758CC4F1DC08B6A0019975B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC481DC08B6A0019975B /* ViewController.swift */; };
 		F758CC511DC08BA30019975B /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC501DC08BA30019975B /* AppConstants.swift */; };
+		F758CC531DC0C39F0019975B /* ServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC521DC0C39F0019975B /* ServiceRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		F758CC461DC089720019975B /* Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridging.h; sourceTree = "<group>"; };
 		F758CC481DC08B6A0019975B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F758CC501DC08BA30019975B /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		F758CC521DC0C39F0019975B /* ServiceRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +208,7 @@
 		F758CC4E1DC08B6A0019975B /* WebServices */ = {
 			isa = PBXGroup;
 			children = (
+				F758CC521DC0C39F0019975B /* ServiceRequest.swift */,
 			);
 			path = WebServices;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F758CC4F1DC08B6A0019975B /* ViewController.swift in Sources */,
+				F758CC531DC0C39F0019975B /* ServiceRequest.swift in Sources */,
 				F758CC511DC08BA30019975B /* AppConstants.swift in Sources */,
 				F758CBF41DC02D4A0019975B /* AppDelegate.swift in Sources */,
 			);
