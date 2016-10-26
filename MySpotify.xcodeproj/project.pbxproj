@@ -26,6 +26,7 @@
 		F758CC5E1DC0C9C80019975B /* DictionaryRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC5D1DC0C9C80019975B /* DictionaryRepresentable.swift */; };
 		F758CC601DC0CDFB0019975B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC5F1DC0CDFB0019975B /* User.swift */; };
 		F758CC621DC0CE210019975B /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC611DC0CE210019975B /* UserTests.swift */; };
+		F758CC641DC0CEFB0019975B /* UserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC631DC0CEFB0019975B /* UserRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		F758CC5D1DC0C9C80019975B /* DictionaryRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryRepresentable.swift; sourceTree = "<group>"; };
 		F758CC5F1DC0CDFB0019975B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F758CC611DC0CE210019975B /* UserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
+		F758CC631DC0CEFB0019975B /* UserRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +229,7 @@
 			children = (
 				F758CC521DC0C39F0019975B /* ServiceRequest.swift */,
 				F758CC581DC0C7580019975B /* TokenRequest.swift */,
+				F758CC631DC0CEFB0019975B /* UserRequest.swift */,
 			);
 			path = WebServices;
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 				F758CC601DC0CDFB0019975B /* User.swift in Sources */,
 				F758CC511DC08BA30019975B /* AppConstants.swift in Sources */,
 				F758CBF41DC02D4A0019975B /* AppDelegate.swift in Sources */,
+				F758CC641DC0CEFB0019975B /* UserRequest.swift in Sources */,
 				F758CC591DC0C7580019975B /* TokenRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

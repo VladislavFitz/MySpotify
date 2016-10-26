@@ -17,6 +17,8 @@ class UserSession {
     
     static let session = UserSession()
     
+    var user: User?
+    
     var currentToken: Token? {
         didSet {
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: UserSession.TokenUpdatedNotification), object: nil, userInfo: nil)
