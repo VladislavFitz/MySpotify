@@ -18,7 +18,12 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        requestTokenCode()
+        if let token = UserSession.session.currentToken, !token.expired {
+            
+        } else {
+            requestTokenCode()
+        }
+
     }
 
     override func didReceiveMemoryWarning() {

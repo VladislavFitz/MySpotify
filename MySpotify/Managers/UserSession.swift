@@ -20,6 +20,15 @@ class UserSession {
     var currentToken: Token? {
         didSet {
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: UserSession.TokenUpdatedNotification), object: nil, userInfo: nil)
+            
+            if let token = currentToken {
+                UserDefaults.standard.setValue(token.dictionary, forKey: "token")
+            } else {
+                UserDefaults.standard.removeObject(forKey: "token")
+            }
+            
+            UserDefaults.standard.synchronize()
+
         }
     }
     

@@ -15,6 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        if
+            let storedTokenDictionary = UserDefaults.standard.object(forKey: "token") as? NSDictionary ,
+            let storedToken = Token(dictionary: storedTokenDictionary),
+            !storedToken.expired
+        {
+            UserSession.session.currentToken = storedToken
+        }
+        
         return true
     }
 
