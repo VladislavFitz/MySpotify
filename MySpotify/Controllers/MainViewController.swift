@@ -62,7 +62,7 @@ class MainViewController: UIViewController {
     }
     
     func presentUserPlaylists() {
-        print("Should present playlists")
+        performSegue(withIdentifier: "PresentPlaylists", sender: self)
     }
 
 
