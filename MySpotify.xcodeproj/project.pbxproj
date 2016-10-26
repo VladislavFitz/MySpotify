@@ -22,6 +22,7 @@
 		F758CC551DC0C41E0019975B /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC541DC0C41E0019975B /* Token.swift */; };
 		F758CC571DC0C4510019975B /* TokenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC561DC0C4510019975B /* TokenTests.swift */; };
 		F758CC591DC0C7580019975B /* TokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC581DC0C7580019975B /* TokenRequest.swift */; };
+		F758CC5C1DC0C95D0019975B /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC5B1DC0C95D0019975B /* UserSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		F758CC541DC0C41E0019975B /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		F758CC561DC0C4510019975B /* TokenTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenTests.swift; sourceTree = "<group>"; };
 		F758CC581DC0C7580019975B /* TokenRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenRequest.swift; sourceTree = "<group>"; };
+		F758CC5B1DC0C95D0019975B /* UserSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 				F758CC4B1DC08B6A0019975B /* Protocols */,
 				F758CC4C1DC08B6A0019975B /* Utils */,
 				F758CC4D1DC08B6A0019975B /* Views */,
+				F758CC5A1DC0C9430019975B /* Managers */,
 				F758CC4E1DC08B6A0019975B /* WebServices */,
 				F758CBF31DC02D4A0019975B /* AppDelegate.swift */,
 				F758CC461DC089720019975B /* Bridging.h */,
@@ -217,6 +220,14 @@
 				F758CC581DC0C7580019975B /* TokenRequest.swift */,
 			);
 			path = WebServices;
+			sourceTree = "<group>";
+		};
+		F758CC5A1DC0C9430019975B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				F758CC5B1DC0C95D0019975B /* UserSession.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -424,6 +435,7 @@
 				F758CC4F1DC08B6A0019975B /* ViewController.swift in Sources */,
 				F758CC551DC0C41E0019975B /* Token.swift in Sources */,
 				F758CC531DC0C39F0019975B /* ServiceRequest.swift in Sources */,
+				F758CC5C1DC0C95D0019975B /* UserSession.swift in Sources */,
 				F758CC511DC08BA30019975B /* AppConstants.swift in Sources */,
 				F758CBF41DC02D4A0019975B /* AppDelegate.swift in Sources */,
 				F758CC591DC0C7580019975B /* TokenRequest.swift in Sources */,
