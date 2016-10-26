@@ -24,6 +24,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UserSession.session.currentToken = storedToken
         }
         
+        if let storedPlaylists = UserDefaults.standard.object(forKey: "playlists") as? [NSDictionary] {
+            Storage.sharedInstance.playlists = storedPlaylists.flatMap({ Playlist(dictionary: $0) })
+        }
+        
         return true
     }
 

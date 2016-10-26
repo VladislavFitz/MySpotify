@@ -41,6 +41,8 @@
 		F758CC7C1DC13D840019975B /* AudioFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC7B1DC13D840019975B /* AudioFeatures.swift */; };
 		F758CC7E1DC13DB90019975B /* AudioFeaturesListWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC7D1DC13DB90019975B /* AudioFeaturesListWrapper.swift */; };
 		F758CC801DC13DD40019975B /* AudioFeaturesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC7F1DC13DD40019975B /* AudioFeaturesRequest.swift */; };
+		F758CC821DC13EAB0019975B /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC811DC13EAB0019975B /* Storage.swift */; };
+		F758CC841DC13FA60019975B /* StorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC831DC13FA60019975B /* StorageTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +99,8 @@
 		F758CC7B1DC13D840019975B /* AudioFeatures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioFeatures.swift; sourceTree = "<group>"; };
 		F758CC7D1DC13DB90019975B /* AudioFeaturesListWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioFeaturesListWrapper.swift; sourceTree = "<group>"; };
 		F758CC7F1DC13DD40019975B /* AudioFeaturesRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioFeaturesRequest.swift; sourceTree = "<group>"; };
+		F758CC811DC13EAB0019975B /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		F758CC831DC13FA60019975B /* StorageTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +170,7 @@
 		F758CBF21DC02D4A0019975B /* MySpotify */ = {
 			isa = PBXGroup;
 			children = (
+				F758CBF31DC02D4A0019975B /* AppDelegate.swift */,
 				F758CC471DC08B6A0019975B /* Controllers */,
 				F758CC491DC08B6A0019975B /* Extensions */,
 				F758CC4A1DC08B6A0019975B /* Models */,
@@ -174,7 +179,6 @@
 				F758CC4D1DC08B6A0019975B /* Views */,
 				F758CC5A1DC0C9430019975B /* Managers */,
 				F758CC4E1DC08B6A0019975B /* WebServices */,
-				F758CBF31DC02D4A0019975B /* AppDelegate.swift */,
 				F758CC461DC089720019975B /* Bridging.h */,
 				F758CBF71DC02D4A0019975B /* Main.storyboard */,
 				F758CBFA1DC02D4A0019975B /* Assets.xcassets */,
@@ -194,6 +198,7 @@
 				F758CC6F1DC12DE90019975B /* TrackTests.swift */,
 				F758CC711DC12DF60019975B /* TracksRepresentationTests.swift */,
 				F758CC731DC12E0D0019975B /* PlaylistTests.swift */,
+				F758CC831DC13FA60019975B /* StorageTests.swift */,
 			);
 			path = MySpotifyTests;
 			sourceTree = "<group>";
@@ -280,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				F758CC5B1DC0C95D0019975B /* UserSession.swift */,
+				F758CC811DC13EAB0019975B /* Storage.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -494,6 +500,7 @@
 				F758CC601DC0CDFB0019975B /* User.swift in Sources */,
 				F758CC6C1DC0D12C0019975B /* Artist.swift in Sources */,
 				F758CC511DC08BA30019975B /* AppConstants.swift in Sources */,
+				F758CC821DC13EAB0019975B /* Storage.swift in Sources */,
 				F758CBF41DC02D4A0019975B /* AppDelegate.swift in Sources */,
 				F758CC7C1DC13D840019975B /* AudioFeatures.swift in Sources */,
 				F758CC681DC0D1000019975B /* TracksRepresentation.swift in Sources */,
@@ -517,6 +524,7 @@
 				F758CC741DC12E0D0019975B /* PlaylistTests.swift in Sources */,
 				F758CC571DC0C4510019975B /* TokenTests.swift in Sources */,
 				F758CC6E1DC12DE00019975B /* ArtistTests.swift in Sources */,
+				F758CC841DC13FA60019975B /* StorageTests.swift in Sources */,
 				F758CC721DC12DF60019975B /* TracksRepresentationTests.swift in Sources */,
 				F758CC701DC12DE90019975B /* TrackTests.swift in Sources */,
 			);
