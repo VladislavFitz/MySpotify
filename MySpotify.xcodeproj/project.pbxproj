@@ -13,13 +13,14 @@
 		F758CBF91DC02D4A0019975B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F758CBF71DC02D4A0019975B /* Main.storyboard */; };
 		F758CBFB1DC02D4A0019975B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F758CBFA1DC02D4A0019975B /* Assets.xcassets */; };
 		F758CBFE1DC02D4A0019975B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F758CBFC1DC02D4A0019975B /* LaunchScreen.storyboard */; };
-		F758CC091DC02D4B0019975B /* MySpotifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC081DC02D4B0019975B /* MySpotifyTests.swift */; };
 		F758CC431DC0889C0019975B /* SpotifyAudioPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F758CC401DC0889C0019975B /* SpotifyAudioPlayback.framework */; };
 		F758CC441DC0889C0019975B /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F758CC411DC0889C0019975B /* SpotifyAuthentication.framework */; };
 		F758CC451DC0889C0019975B /* SpotifyMetadata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F758CC421DC0889C0019975B /* SpotifyMetadata.framework */; };
 		F758CC4F1DC08B6A0019975B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC481DC08B6A0019975B /* ViewController.swift */; };
 		F758CC511DC08BA30019975B /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC501DC08BA30019975B /* AppConstants.swift */; };
 		F758CC531DC0C39F0019975B /* ServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC521DC0C39F0019975B /* ServiceRequest.swift */; };
+		F758CC551DC0C41E0019975B /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC541DC0C41E0019975B /* Token.swift */; };
+		F758CC571DC0C4510019975B /* TokenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC561DC0C4510019975B /* TokenTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +47,6 @@
 		F758CBFD1DC02D4A0019975B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F758CBFF1DC02D4A0019975B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F758CC041DC02D4B0019975B /* MySpotifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MySpotifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F758CC081DC02D4B0019975B /* MySpotifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySpotifyTests.swift; sourceTree = "<group>"; };
 		F758CC0A1DC02D4B0019975B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F758CC401DC0889C0019975B /* SpotifyAudioPlayback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAudioPlayback.framework; sourceTree = "<group>"; };
 		F758CC411DC0889C0019975B /* SpotifyAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAuthentication.framework; sourceTree = "<group>"; };
@@ -55,6 +55,8 @@
 		F758CC481DC08B6A0019975B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F758CC501DC08BA30019975B /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		F758CC521DC0C39F0019975B /* ServiceRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceRequest.swift; sourceTree = "<group>"; };
+		F758CC541DC0C41E0019975B /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		F758CC561DC0C4510019975B /* TokenTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,7 +146,7 @@
 		F758CC071DC02D4B0019975B /* MySpotifyTests */ = {
 			isa = PBXGroup;
 			children = (
-				F758CC081DC02D4B0019975B /* MySpotifyTests.swift */,
+				F758CC561DC0C4510019975B /* TokenTests.swift */,
 				F758CC0A1DC02D4B0019975B /* Info.plist */,
 			);
 			path = MySpotifyTests;
@@ -179,6 +181,7 @@
 		F758CC4A1DC08B6A0019975B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F758CC541DC0C41E0019975B /* Token.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F758CC4F1DC08B6A0019975B /* ViewController.swift in Sources */,
+				F758CC551DC0C41E0019975B /* Token.swift in Sources */,
 				F758CC531DC0C39F0019975B /* ServiceRequest.swift in Sources */,
 				F758CC511DC08BA30019975B /* AppConstants.swift in Sources */,
 				F758CBF41DC02D4A0019975B /* AppDelegate.swift in Sources */,
@@ -426,7 +430,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F758CC091DC02D4B0019975B /* MySpotifyTests.swift in Sources */,
+				F758CC571DC0C4510019975B /* TokenTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
