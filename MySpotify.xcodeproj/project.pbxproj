@@ -48,6 +48,9 @@
 		F758CC8A1DC146A20019975B /* TracksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC891DC146A20019975B /* TracksViewController.swift */; };
 		F758CC8C1DC147120019975B /* PlaylistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC8B1DC147120019975B /* PlaylistTableViewCell.swift */; };
 		F758CC8E1DC147260019975B /* TrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC8D1DC147260019975B /* TrackTableViewCell.swift */; };
+		F758CC901DC147DE0019975B /* PlaylistsSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC8F1DC147DE0019975B /* PlaylistsSource.swift */; };
+		F758CC921DC148590019975B /* TracksSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC911DC148590019975B /* TracksSource.swift */; };
+		F758CC941DC149770019975B /* RefreshableItemsSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC931DC149770019975B /* RefreshableItemsSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +114,9 @@
 		F758CC891DC146A20019975B /* TracksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracksViewController.swift; sourceTree = "<group>"; };
 		F758CC8B1DC147120019975B /* PlaylistTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistTableViewCell.swift; sourceTree = "<group>"; };
 		F758CC8D1DC147260019975B /* TrackTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackTableViewCell.swift; sourceTree = "<group>"; };
+		F758CC8F1DC147DE0019975B /* PlaylistsSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistsSource.swift; sourceTree = "<group>"; };
+		F758CC911DC148590019975B /* TracksSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracksSource.swift; sourceTree = "<group>"; };
+		F758CC931DC149770019975B /* RefreshableItemsSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshableItemsSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +260,8 @@
 				F758CC751DC13C850019975B /* ListWrapper.swift */,
 				F758CC7B1DC13D840019975B /* AudioFeatures.swift */,
 				F758CC7D1DC13DB90019975B /* AudioFeaturesListWrapper.swift */,
+				F758CC8F1DC147DE0019975B /* PlaylistsSource.swift */,
+				F758CC911DC148590019975B /* TracksSource.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -262,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				F758CC5D1DC0C9C80019975B /* DictionaryRepresentable.swift */,
+				F758CC931DC149770019975B /* RefreshableItemsSource.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -517,7 +526,9 @@
 				F758CC601DC0CDFB0019975B /* User.swift in Sources */,
 				F758CC6C1DC0D12C0019975B /* Artist.swift in Sources */,
 				F758CC511DC08BA30019975B /* AppConstants.swift in Sources */,
+				F758CC921DC148590019975B /* TracksSource.swift in Sources */,
 				F758CC821DC13EAB0019975B /* Storage.swift in Sources */,
+				F758CC901DC147DE0019975B /* PlaylistsSource.swift in Sources */,
 				F758CBF41DC02D4A0019975B /* AppDelegate.swift in Sources */,
 				F758CC7C1DC13D840019975B /* AudioFeatures.swift in Sources */,
 				F758CC681DC0D1000019975B /* TracksRepresentation.swift in Sources */,
@@ -529,6 +540,7 @@
 				F758CC591DC0C7580019975B /* TokenRequest.swift in Sources */,
 				F758CC761DC13C850019975B /* ListWrapper.swift in Sources */,
 				F758CC781DC13CA80019975B /* PlaylistsRequest.swift in Sources */,
+				F758CC941DC149770019975B /* RefreshableItemsSource.swift in Sources */,
 				F758CC861DC1440A0019975B /* UIViewController+Error.swift in Sources */,
 				F758CC7E1DC13DB90019975B /* AudioFeaturesListWrapper.swift in Sources */,
 				F758CC881DC146890019975B /* PlaylistsViewController.swift in Sources */,
