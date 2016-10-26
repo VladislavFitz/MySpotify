@@ -17,8 +17,19 @@ class PlaylistsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if let userName = UserSession.session.user?.id {
+            title = "\(userName)' playlists"
+        } else {
+            title = "Playlists"
+        }
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(toggleEditing))
+
+        
         refreshControl = UIRefreshControl()
         refreshControl?.addTarget(self, action:  #selector(refresh), for: .valueChanged)
+        
+        
         
         refresh()
         
@@ -69,6 +80,11 @@ class PlaylistsViewController: UITableViewController {
         
     }
     
+    func toggleEditing() {
+        tableView.setEditing(!tableView.isEditing, animated: true)
+        navigationItem.rightBarButtonItem?.title = tableView.isEditing ? "Save" : "Edit"
+    }
+    
 }
 
 //MARK: - UITableViewDataSource
@@ -94,8 +110,20 @@ extension PlaylistsViewController {
         (cell as? PlaylistTableViewCell)?.configureWith(playlist: playlist)
     }
     
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        performSegue(withIdentifier: PlaylistsViewController.showTracksSegue, sender: self)
-//    }
+    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+        return .none
+    }
+    
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        source.moveItem(fromSourceIndex: sourceIndexPath.row, toTargetIndex: destinationIndexPath.row)
+    }
+    
+    override func tableView(_ tableView: UITableView, targetIndexPathForMoveFromRowAt sourceIndexPath: IndexPath, toProposedIndexPath proposedDestinationIndexPath: IndexPath) -> IndexPath {
+        return proposedDestinationIndexPath
+    }
     
 }
