@@ -38,3 +38,32 @@ extension Token: Unboxable {
     }
     
 }
+
+extension Token: DictionaryRepresentable {
+    
+    init?(dictionary: NSDictionary) {
+        if
+            let type = dictionary.value(forKey: "token_type") as? String,
+            let accessToken = dictionary.value(forKey: "access_token") as? String,
+            let refreshToken = dictionary.value(forKey: "refresh_token") as? String,
+            let expirationDate = dictionary.value(forKey: "expiration_date") as? Date
+        {
+            self.type = type
+            self.accessToken = accessToken
+            self.refreshToken = refreshToken
+            self.expirationDate = expirationDate
+        } else {
+            return nil
+        }
+    }
+    
+    var dictionary: NSDictionary {
+        let dictionary = NSMutableDictionary()
+        dictionary.setValue(type, forKey: "token_type")
+        dictionary.setValue(accessToken, forKey: "access_token")
+        dictionary.setValue(refreshToken, forKey: "refresh_token")
+        dictionary.setValue(expirationDate, forKey: "expiration_date")
+        return dictionary
+    }
+    
+}

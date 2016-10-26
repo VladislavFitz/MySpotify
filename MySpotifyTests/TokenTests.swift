@@ -56,4 +56,30 @@ class TokenTests: XCTestCase {
         XCTAssertTrue(expiredToken.expired)
     }
     
+    func testDictionaryRepresentable() {
+        
+        let date = Date()
+        let token = Token(type: "tokenType", accessToken: "12345", refreshToken: "54321", expirationDate: date)
+        
+        let tokenDictionary = token.dictionary
+        
+        XCTAssertEqual(tokenDictionary.value(forKey: "token_type") as? String, "tokenType")
+        XCTAssertEqual(tokenDictionary.value(forKey: "access_token") as? String, "12345")
+        XCTAssertEqual(tokenDictionary.value(forKey: "refresh_token") as? String, "54321")
+        XCTAssertEqual(tokenDictionary.value(forKey: "expiration_date") as? Date, date)
+        
+        let decodedToken = Token(dictionary: tokenDictionary)
+        
+        XCTAssertNotNil(decodedToken)
+        XCTAssertEqual(decodedToken?.type, "tokenType")
+        XCTAssertEqual(decodedToken?.accessToken, "12345")
+        XCTAssertEqual(decodedToken?.refreshToken, "54321")
+        XCTAssertEqual(decodedToken?.expirationDate, date)
+
+
+        XCTAssertNil(Token(dictionary: [:]))
+
+        
+    }
+    
 }
