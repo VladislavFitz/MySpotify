@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  MySpotify
 //
 //  Created by Vladislav Fitc on 26.10.16.
@@ -8,10 +8,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(tokenUpdated), name: Notification.Name(rawValue: UserSession.TokenUpdatedNotification), object: .none)
 
     }
     
@@ -26,11 +32,11 @@ class ViewController: UIViewController {
         }
 
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
+    func tokenUpdated() {
+        requestUser(successCompletion: presentUserPlaylists)
+    }
+
     func requestTokenCode() {
         if let requestTokenURL = SPTAuth.loginURL(forClientId: AppConstants.clientID, withRedirectURL: URL(string: AppConstants.redirectURI)!, scopes: [], responseType: "code", allowNativeLogin: true) {
             UIApplication.shared.openURL(requestTokenURL)
@@ -38,10 +44,16 @@ class ViewController: UIViewController {
     }
     
     func requestUser(successCompletion: @escaping (Void) -> Void) {
+        
         UserRequest().perform() { result in
             switch result {
             case .failure(let error):
-                print(error)
+                DispatchQueue.main.async {
+                    self.presentErrorController(error: error, retryHandler: {
+                        self.requestUser(successCompletion: successCompletion)
+                    })
+                }
+                
             case .success(let user):
                 UserSession.session.user = user
                 successCompletion()
