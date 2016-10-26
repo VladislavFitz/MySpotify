@@ -10,6 +10,8 @@ import Foundation
 
 class PlaylistsViewController: UITableViewController {
     
+    static let showTracksSegue = "ShowTracks"
+    
     var source: PlaylistsSource = PlaylistsSource()
     
     override func viewDidLoad() {
@@ -20,6 +22,27 @@ class PlaylistsViewController: UITableViewController {
         
         refresh()
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case PlaylistsViewController.showTracksSegue?:
+            guard let tracksViewController = segue.destination as? TracksViewController else {
+                return
+            }
+            
+            guard let selectedPlaylistIndex = tableView.indexPathForSelectedRow?.row else {
+                return
+            }
+            
+            let playlist = source.items[selectedPlaylistIndex]
+            
+            tracksViewController.title = playlist.name
+            tracksViewController.source = TracksSource(playlistID: playlist.id)
+            
+        default:
+            break
+        }
     }
     
     func refresh() {
@@ -71,8 +94,8 @@ extension PlaylistsViewController {
         (cell as? PlaylistTableViewCell)?.configureWith(playlist: playlist)
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "ShowTracks", sender: self)
-    }
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        performSegue(withIdentifier: PlaylistsViewController.showTracksSegue, sender: self)
+//    }
     
 }

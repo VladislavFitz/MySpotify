@@ -37,16 +37,16 @@
         <scene sceneID="QXC-H5-VWy">
             <objects>
                 <tableViewController id="xrn-IY-jf3" customClass="PlaylistsViewController" customModule="MySpotify" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="lMd-7J-YeX">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="lMd-7J-YeX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PlaylistTableViewCell" rowHeight="67" id="F5G-8q-rwg" customClass="PlaylistTableViewCell" customModule="MySpotify" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="67"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PlaylistTableViewCell" rowHeight="80" id="F5G-8q-rwg" customClass="PlaylistTableViewCell" customModule="MySpotify" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="F5G-8q-rwg" id="fHD-7N-7c2">
-                                    <frame key="frameInset" width="342" height="66"/>
+                                    <frame key="frameInset" width="342" height="79"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metallica - The Best" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4o-hf-Noz">
@@ -74,6 +74,7 @@
                                 <connections>
                                     <outlet property="countLabel" destination="14O-Yy-hrY" id="TBS-zT-OVf"/>
                                     <outlet property="titleLabel" destination="r4o-hf-Noz" id="f3k-3Q-3kh"/>
+                                    <segue destination="BQz-L7-qu6" kind="show" identifier="ShowTracks" id="VgG-LB-tpT"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -83,28 +84,25 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="PaJ-gA-I8d"/>
-                    <connections>
-                        <segue destination="BQz-L7-qu6" kind="show" identifier="ShowTracks" id="9lp-2L-Tgh"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="egS-Gd-uJP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2121" y="72"/>
+            <point key="canvasLocation" x="2120.8000000000002" y="71.514242878560722"/>
         </scene>
         <!--Tracks View Controller-->
         <scene sceneID="QOt-gE-bMc">
             <objects>
                 <tableViewController id="BQz-L7-qu6" customClass="TracksViewController" customModule="MySpotify" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="gSh-Vu-FOB">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" sectionHeaderHeight="28" sectionFooterHeight="28" id="gSh-Vu-FOB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TrackTableViewCell" rowHeight="69" id="IZD-xJ-2VN" customClass="TrackTableViewCell" customModule="MySpotify" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="69"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TrackTableViewCell" rowHeight="85" id="IZD-xJ-2VN" customClass="TrackTableViewCell" customModule="MySpotify" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IZD-xJ-2VN" id="6om-un-Jvm">
-                                    <frame key="frameInset" width="375" height="68"/>
+                                    <frame key="frameInset" width="375" height="84"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Leaf Clover" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DoZ-5y-gay">
@@ -149,7 +147,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ava-9z-LR0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3174" y="72"/>
+            <point key="canvasLocation" x="3173.5999999999999" y="71.514242878560722"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Rpx-qT-ZRw">
