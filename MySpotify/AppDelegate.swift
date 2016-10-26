@@ -34,7 +34,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             switch item.name {
             case "code":
                 if let code = item.value {
-                    print(code)
+                    TokenRequest(code: code).perform() { result in
+                        switch result {
+                        case .failure(let error):
+                            print(error)
+                            
+                        case .success(let token):
+                            UserSession.session.currentToken = token
+                        }
+                    }
                 }
                 
             case "error":
