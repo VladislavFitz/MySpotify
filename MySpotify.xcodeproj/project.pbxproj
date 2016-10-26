@@ -35,6 +35,9 @@
 		F758CC701DC12DE90019975B /* TrackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC6F1DC12DE90019975B /* TrackTests.swift */; };
 		F758CC721DC12DF60019975B /* TracksRepresentationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC711DC12DF60019975B /* TracksRepresentationTests.swift */; };
 		F758CC741DC12E0D0019975B /* PlaylistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC731DC12E0D0019975B /* PlaylistTests.swift */; };
+		F758CC761DC13C850019975B /* ListWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC751DC13C850019975B /* ListWrapper.swift */; };
+		F758CC781DC13CA80019975B /* PlaylistsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC771DC13CA80019975B /* PlaylistsRequest.swift */; };
+		F758CC7A1DC13CCF0019975B /* TracksRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC791DC13CCF0019975B /* TracksRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +88,9 @@
 		F758CC6F1DC12DE90019975B /* TrackTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackTests.swift; sourceTree = "<group>"; };
 		F758CC711DC12DF60019975B /* TracksRepresentationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracksRepresentationTests.swift; sourceTree = "<group>"; };
 		F758CC731DC12E0D0019975B /* PlaylistTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistTests.swift; sourceTree = "<group>"; };
+		F758CC751DC13C850019975B /* ListWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListWrapper.swift; sourceTree = "<group>"; };
+		F758CC771DC13CA80019975B /* PlaylistsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistsRequest.swift; sourceTree = "<group>"; };
+		F758CC791DC13CCF0019975B /* TracksRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracksRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +227,7 @@
 				F758CC671DC0D1000019975B /* TracksRepresentation.swift */,
 				F758CC691DC0D1120019975B /* Track.swift */,
 				F758CC6B1DC0D12C0019975B /* Artist.swift */,
+				F758CC751DC13C850019975B /* ListWrapper.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -254,6 +261,8 @@
 				F758CC521DC0C39F0019975B /* ServiceRequest.swift */,
 				F758CC581DC0C7580019975B /* TokenRequest.swift */,
 				F758CC631DC0CEFB0019975B /* UserRequest.swift */,
+				F758CC771DC13CA80019975B /* PlaylistsRequest.swift */,
+				F758CC791DC13CCF0019975B /* TracksRequest.swift */,
 			);
 			path = WebServices;
 			sourceTree = "<group>";
@@ -481,7 +490,10 @@
 				F758CC661DC0D0F70019975B /* Playlist.swift in Sources */,
 				F758CC6A1DC0D1120019975B /* Track.swift in Sources */,
 				F758CC641DC0CEFB0019975B /* UserRequest.swift in Sources */,
+				F758CC7A1DC13CCF0019975B /* TracksRequest.swift in Sources */,
 				F758CC591DC0C7580019975B /* TokenRequest.swift in Sources */,
+				F758CC761DC13C850019975B /* ListWrapper.swift in Sources */,
+				F758CC781DC13CA80019975B /* PlaylistsRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
