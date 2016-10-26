@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,16 +17,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        
         if
             let storedTokenDictionary = UserDefaults.standard.object(forKey: "token") as? NSDictionary ,
-            let storedToken = Token(dictionary: storedTokenDictionary),
-            !storedToken.expired
+            let storedToken = Token(dictionary: storedTokenDictionary)
         {
             UserSession.session.currentToken = storedToken
         }
         
-        if let storedPlaylists = UserDefaults.standard.object(forKey: "playlists") as? [NSDictionary] {
-            Storage.sharedInstance.playlists = storedPlaylists.flatMap({ Playlist(dictionary: $0) })
+        if
+            let storedUserDictionary = UserDefaults.standard.object(forKey: "lastUser") as? NSDictionary,
+            let storedUser = User(dictionary: storedUserDictionary)
+        {
+            UserSession.session.user = storedUser
         }
         
         return true

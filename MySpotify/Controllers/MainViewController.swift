@@ -14,8 +14,6 @@ class MainViewController: UIViewController {
         NotificationCenter.default.removeObserver(self)
     }
     
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,7 +24,12 @@ class MainViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        if let token = UserSession.session.currentToken, !token.expired {
+        if UserSession.session.user != nil {
+            
+            presentUserPlaylists()
+            
+        } else if let token = UserSession.session.currentToken, !token.expired {
+            
             requestUser(successCompletion: presentUserPlaylists)
             
         } else {
@@ -36,6 +39,7 @@ class MainViewController: UIViewController {
     }
     
     func tokenUpdated() {
+        presentedViewController?.dismiss(animated: true, completion: .none)
         requestUser(successCompletion: presentUserPlaylists)
     }
 
@@ -61,6 +65,7 @@ class MainViewController: UIViewController {
                 successCompletion()
             }
         }
+        
     }
     
     func presentUserPlaylists() {

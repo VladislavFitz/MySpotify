@@ -31,4 +31,24 @@ class UserTests: XCTestCase {
         }
         
     }
+    
+    func testDictionaryRepresentable() {
+        
+        let user = User(id: "userID", name: "userName", playlists: [])
+        
+        let userDictionary = user.dictionary
+        
+        XCTAssertEqual(userDictionary.value(forKey: "id") as? String, "userID")
+        XCTAssertEqual(userDictionary.value(forKey: "name") as? String, "userName")
+        
+        let decodedUser = User(dictionary:userDictionary)
+        
+        XCTAssertNotNil(decodedUser)
+        XCTAssertEqual(decodedUser?.id, "userID")
+        XCTAssertEqual(decodedUser?.name, "userName")
+        
+        XCTAssertNil(User(dictionary: [:]))
+        
+    }
+    
 }

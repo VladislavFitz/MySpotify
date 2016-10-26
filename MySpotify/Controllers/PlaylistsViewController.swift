@@ -29,8 +29,6 @@ class PlaylistsViewController: UITableViewController {
         refreshControl = UIRefreshControl()
         refreshControl?.addTarget(self, action:  #selector(refresh), for: .valueChanged)
         
-        
-        
         refresh()
         
     }

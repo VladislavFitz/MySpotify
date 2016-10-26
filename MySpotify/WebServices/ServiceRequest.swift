@@ -42,25 +42,32 @@ extension ServiceRequest where ResultType: Unboxable {
                 resultHandler(.failure(error))
             }
             
-            if let json = response.result.value as? [String: Any] {
+            switch response.result {
+            case .success(let json as [String: Any]):
                 
                 if let error = json["error"] as? String {
+                    
                     let error = NSError(domain: "Web Service", code: 100, userInfo: [NSLocalizedDescriptionKey: error])
                     resultHandler(.failure(error))
-                    return
+
+                } else {
+                    do {
+                        let result: ResultType = try unbox(dictionary: json)
+                        resultHandler(.success(result))
+                    } catch let error {
+                        resultHandler(.failure(error))
+                    }
                 }
                 
-                do {
-                    let result: ResultType = try unbox(dictionary: json)
-                    resultHandler(.success(result))
-                } catch let error {
-                    resultHandler(.failure(error))
-                }
+            case .failure(let error):
+                resultHandler(.failure(error))
                 
-            } else {
+            default:
                 let error = NSError(domain: "Web Service", code: 101, userInfo: [NSLocalizedDescriptionKey: "Cast value to json failed"])
                 resultHandler(.failure(error))
+                
             }
+            
         }
     }
     

@@ -17,7 +17,19 @@ class UserSession {
     
     static let session = UserSession()
     
-    var user: User?
+    var user: User? {
+        didSet {
+            if let user = user {
+                Storage.sharedInstance.playlists = user.playlists
+                UserDefaults.standard.setValue(user.dictionary, forKey: "lastUser")
+            } else {
+                Storage.sharedInstance.playlists = []
+                UserDefaults.standard.removeObject(forKey: "lastUser")
+            }
+            
+            UserDefaults.standard.synchronize()
+        }
+    }
     
     var currentToken: Token? {
         didSet {

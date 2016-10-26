@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		64C6EEA485ED875FAB25C6E0 /* Pods_MySpotifyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F4834EF23E8881FDAD63A9 /* Pods_MySpotifyTests.framework */; };
 		980F78DE366C25B005B22EF4 /* Pods_MySpotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C2301BC58ABB07C1B32F89 /* Pods_MySpotify.framework */; };
+		F706EFC41DC15D8A0078FAF4 /* NSError+Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = F706EFC31DC15D8A0078FAF4 /* NSError+Description.swift */; };
 		F758CBF41DC02D4A0019975B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CBF31DC02D4A0019975B /* AppDelegate.swift */; };
 		F758CBF91DC02D4A0019975B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F758CBF71DC02D4A0019975B /* Main.storyboard */; };
 		F758CBFB1DC02D4A0019975B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F758CBFA1DC02D4A0019975B /* Assets.xcassets */; };
@@ -70,6 +71,7 @@
 		90BC41DAD1204B542D1BC344 /* Pods-MySpotifyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySpotifyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MySpotifyTests/Pods-MySpotifyTests.release.xcconfig"; sourceTree = "<group>"; };
 		C2F4834EF23E8881FDAD63A9 /* Pods_MySpotifyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MySpotifyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D48A853CCCEBBA562F167635 /* Pods-MySpotify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySpotify.release.xcconfig"; path = "Pods/Target Support Files/Pods-MySpotify/Pods-MySpotify.release.xcconfig"; sourceTree = "<group>"; };
+		F706EFC31DC15D8A0078FAF4 /* NSError+Description.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError+Description.swift"; sourceTree = "<group>"; };
 		F758CBF01DC02D4A0019975B /* MySpotify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySpotify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F758CBF31DC02D4A0019975B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F758CBF81DC02D4A0019975B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -207,9 +209,9 @@
 		F758CC071DC02D4B0019975B /* MySpotifyTests */ = {
 			isa = PBXGroup;
 			children = (
+				F758CC0A1DC02D4B0019975B /* Info.plist */,
 				F758CC561DC0C4510019975B /* TokenTests.swift */,
 				F758CC611DC0CE210019975B /* UserTests.swift */,
-				F758CC0A1DC02D4B0019975B /* Info.plist */,
 				F758CC6D1DC12DE00019975B /* ArtistTests.swift */,
 				F758CC6F1DC12DE90019975B /* TrackTests.swift */,
 				F758CC711DC12DF60019975B /* TracksRepresentationTests.swift */,
@@ -244,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				F758CC851DC1440A0019975B /* UIViewController+Error.swift */,
+				F706EFC31DC15D8A0078FAF4 /* NSError+Description.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 				F758CC5E1DC0C9C80019975B /* DictionaryRepresentable.swift in Sources */,
 				F758CC531DC0C39F0019975B /* ServiceRequest.swift in Sources */,
 				F758CC8E1DC147260019975B /* TrackTableViewCell.swift in Sources */,
+				F706EFC41DC15D8A0078FAF4 /* NSError+Description.swift in Sources */,
 				F758CC5C1DC0C95D0019975B /* UserSession.swift in Sources */,
 				F758CC601DC0CDFB0019975B /* User.swift in Sources */,
 				F758CC6C1DC0D12C0019975B /* Artist.swift in Sources */,
@@ -613,6 +617,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -664,6 +669,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
