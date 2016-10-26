@@ -44,6 +44,10 @@
 		F758CC821DC13EAB0019975B /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC811DC13EAB0019975B /* Storage.swift */; };
 		F758CC841DC13FA60019975B /* StorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC831DC13FA60019975B /* StorageTests.swift */; };
 		F758CC861DC1440A0019975B /* UIViewController+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC851DC1440A0019975B /* UIViewController+Error.swift */; };
+		F758CC881DC146890019975B /* PlaylistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC871DC146880019975B /* PlaylistsViewController.swift */; };
+		F758CC8A1DC146A20019975B /* TracksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC891DC146A20019975B /* TracksViewController.swift */; };
+		F758CC8C1DC147120019975B /* PlaylistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC8B1DC147120019975B /* PlaylistTableViewCell.swift */; };
+		F758CC8E1DC147260019975B /* TrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC8D1DC147260019975B /* TrackTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +107,10 @@
 		F758CC811DC13EAB0019975B /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		F758CC831DC13FA60019975B /* StorageTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageTests.swift; sourceTree = "<group>"; };
 		F758CC851DC1440A0019975B /* UIViewController+Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Error.swift"; sourceTree = "<group>"; };
+		F758CC871DC146880019975B /* PlaylistsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistsViewController.swift; sourceTree = "<group>"; };
+		F758CC891DC146A20019975B /* TracksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracksViewController.swift; sourceTree = "<group>"; };
+		F758CC8B1DC147120019975B /* PlaylistTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistTableViewCell.swift; sourceTree = "<group>"; };
+		F758CC8D1DC147260019975B /* TrackTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +228,8 @@
 			isa = PBXGroup;
 			children = (
 				F758CC481DC08B6A0019975B /* MainViewController.swift */,
+				F758CC871DC146880019975B /* PlaylistsViewController.swift */,
+				F758CC891DC146A20019975B /* TracksViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -267,6 +277,8 @@
 		F758CC4D1DC08B6A0019975B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F758CC8B1DC147120019975B /* PlaylistTableViewCell.swift */,
+				F758CC8D1DC147260019975B /* TrackTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -495,10 +507,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F758CC8C1DC147120019975B /* PlaylistTableViewCell.swift in Sources */,
 				F758CC4F1DC08B6A0019975B /* MainViewController.swift in Sources */,
 				F758CC551DC0C41E0019975B /* Token.swift in Sources */,
 				F758CC5E1DC0C9C80019975B /* DictionaryRepresentable.swift in Sources */,
 				F758CC531DC0C39F0019975B /* ServiceRequest.swift in Sources */,
+				F758CC8E1DC147260019975B /* TrackTableViewCell.swift in Sources */,
 				F758CC5C1DC0C95D0019975B /* UserSession.swift in Sources */,
 				F758CC601DC0CDFB0019975B /* User.swift in Sources */,
 				F758CC6C1DC0D12C0019975B /* Artist.swift in Sources */,
@@ -507,6 +521,7 @@
 				F758CBF41DC02D4A0019975B /* AppDelegate.swift in Sources */,
 				F758CC7C1DC13D840019975B /* AudioFeatures.swift in Sources */,
 				F758CC681DC0D1000019975B /* TracksRepresentation.swift in Sources */,
+				F758CC8A1DC146A20019975B /* TracksViewController.swift in Sources */,
 				F758CC661DC0D0F70019975B /* Playlist.swift in Sources */,
 				F758CC6A1DC0D1120019975B /* Track.swift in Sources */,
 				F758CC641DC0CEFB0019975B /* UserRequest.swift in Sources */,
@@ -516,6 +531,7 @@
 				F758CC781DC13CA80019975B /* PlaylistsRequest.swift in Sources */,
 				F758CC861DC1440A0019975B /* UIViewController+Error.swift in Sources */,
 				F758CC7E1DC13DB90019975B /* AudioFeaturesListWrapper.swift in Sources */,
+				F758CC881DC146890019975B /* PlaylistsViewController.swift in Sources */,
 				F758CC801DC13DD40019975B /* AudioFeaturesRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
