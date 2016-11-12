@@ -6,7 +6,7 @@ target 'MySpotify' do
 
   pod 'Alamofire'
   pod 'Unbox'
-
+  pod "VK-ios-sdk" 
   target 'MySpotifyTests' do
     inherit! :search_paths
  pod 'Alamofire'

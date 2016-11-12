@@ -1,15 +1,18 @@
 PODS:
   - Alamofire (4.0.1)
   - Unbox (2.2.0)
+  - VK-ios-sdk (1.4.4)
 
 DEPENDENCIES:
   - Alamofire
   - Unbox
+  - VK-ios-sdk
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   Unbox: 03d7128ce429987986bc08d967e9d5e0da158946
+  VK-ios-sdk: 296c3be1bb45faf4d9f9a2ca69dcf6ec71d9d4df
 
-PODFILE CHECKSUM: 5d148354a79756228c779c2440b5e3f7ac47c8b7
+PODFILE CHECKSUM: df09227d501d4f16238f3d9c45b39b0b0b33eb5c
 
 COCOAPODS: 1.1.1
