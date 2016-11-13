@@ -12,7 +12,7 @@ import Unbox
 
 struct TracksRequest: ServiceRequest {
     
-    typealias ResultType = ListWrapper<Track>
+    typealias ResultType = ListWrapper<SPTTrack>
     
     let url: String
     let method: Alamofire.HTTPMethod

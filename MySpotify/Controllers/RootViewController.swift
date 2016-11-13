@@ -26,8 +26,11 @@ class RootViewController: UITabBarController {
         
         let vkController = VKController()
         vkController.tabBarItem.image = UIImage(named: "vk")
-        viewControllers = [vkController]
         
+        let spotifyController = UIStoryboard(name: "Spotify", bundle: .none).instantiateInitialViewController()
+        spotifyController?.tabBarItem.image = UIImage(named: "spotify")
+        
+        viewControllers = [vkController, spotifyController].flatMap({ $0 })
         
     }
     

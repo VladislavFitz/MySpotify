@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  SpotifyViewController.swift
 //  MySpotify
 //
 //  Created by Vladislav Fitc on 26.10.16.
@@ -7,10 +7,8 @@
 //
 
 import UIKit
-import VK_ios_sdk
-import Unbox
 
-class MainViewController: UIViewController {
+class SpotifyViewController: UIViewController {
 
     deinit {
         NotificationCenter.default.removeObserver(self)
@@ -26,17 +24,17 @@ class MainViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-//        if UserSession.session.user != nil {
-//            
-//            presentUserPlaylists()
-//            
-//        } else if let token = UserSession.session.currentToken, !token.expired {
-//            
-//            requestUser(successCompletion: presentUserPlaylists)
-//            
-//        } else {
-//            requestTokenCode()
-//        }
+        if UserSession.session.user != nil {
+            
+            presentUserPlaylists()
+            
+        } else if let token = UserSession.session.currentToken, !token.expired {
+            
+            requestUser(successCompletion: presentUserPlaylists)
+            
+        } else {
+            requestTokenCode()
+        }
 
     }
     
