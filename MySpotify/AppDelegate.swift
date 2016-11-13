@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import VK_ios_sdk
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -32,10 +33,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UserSession.session.user = storedUser
         }
         
+        VKSdk.initialize(withAppId: "4555931")
+        
         return true
     }
 
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        let sourceApplication = options[.sourceApplication] as! String
+        VKSdk.processOpen(url, fromApplication: sourceApplication)
         
         URLComponents(url: url, resolvingAgainstBaseURL: true)?.queryItems?.forEach { item in
             
