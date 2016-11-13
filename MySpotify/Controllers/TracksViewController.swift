@@ -10,7 +10,7 @@ import Foundation
 
 class TracksViewController: UITableViewController {
     
-    var source: TracksSource!
+    var source: SPTTracksSource!
 
     override func viewDidLoad() {
         super.viewDidLoad()

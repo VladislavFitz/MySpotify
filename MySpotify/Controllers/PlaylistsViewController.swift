@@ -47,7 +47,7 @@ class PlaylistsViewController: UITableViewController {
             let playlist = source.items[selectedPlaylistIndex]
             
             tracksViewController.title = playlist.name
-            tracksViewController.source = TracksSource(playlistID: playlist.id)
+            tracksViewController.source = SPTTracksSource(playlistID: playlist.id)
             
         default:
             break

@@ -1,5 +1,5 @@
 //
-//  TracksSource.swift
+//  SPTTracksSource.swift
 //  MySpotify
 //
 //  Created by Vladislav Fitc on 26.10.16.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class TracksSource: RefreshableItemsSource {
+class SPTTracksSource: RefreshableTracksSource {
     
     typealias ItemType = SPTTrack
     
