@@ -15,14 +15,24 @@ struct VKTracksRequest: ConvenienceServiceRequest {
     typealias ResultType = [VKTrack]
     
     let ownerID: String
+    let albumID: String?
     
-    init(ownerID: String) {
+    init(ownerID: String, albumID: String? = .none) {
         self.ownerID = ownerID
+        self.albumID = albumID
     }
     
     func perform(resultHandler: @escaping (ServiceRequestResult<Array<VKTrack>>) -> Void) {
         
-        VKApi.request(withMethod: "audio.get", andParameters: ["owner_id": ownerID]).execute(
+        var parameters = [AnyHashable : Any]()
+        
+        parameters["owner_id"] = ownerID
+        
+        if let albumID = albumID {
+            parameters["album_id"] = albumID
+        }
+        
+        VKApi.request(withMethod: "audio.get", andParameters: parameters).execute(
             resultBlock: { result in
                 if let resultJSON = result?.json as? UnboxableDictionary {
                     do {

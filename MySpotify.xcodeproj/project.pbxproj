@@ -57,6 +57,7 @@
 		F77DEC611DD8977100D6EABA /* SPTTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77DEC5D1DD8977100D6EABA /* SPTTrack.swift */; };
 		F77DEC621DD8977100D6EABA /* SPTTracksSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77DEC5E1DD8977100D6EABA /* SPTTracksSource.swift */; };
 		F77DEC631DD8977100D6EABA /* VKTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77DEC601DD8977100D6EABA /* VKTrack.swift */; };
+		F77DEC651DD8982500D6EABA /* VKTracksSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77DEC641DD8982500D6EABA /* VKTracksSource.swift */; };
 		F7D30C571DD86CFE00821B17 /* VKController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D30C561DD86CFE00821B17 /* VKController.swift */; };
 		F7D30C591DD86DA300821B17 /* ConvenienceServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D30C581DD86DA300821B17 /* ConvenienceServiceRequest.swift */; };
 		F7D30C5B1DD86E2C00821B17 /* VKTracksRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D30C5A1DD86E2C00821B17 /* VKTracksRequest.swift */; };
@@ -134,6 +135,7 @@
 		F77DEC5D1DD8977100D6EABA /* SPTTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTTrack.swift; sourceTree = "<group>"; };
 		F77DEC5E1DD8977100D6EABA /* SPTTracksSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTTracksSource.swift; sourceTree = "<group>"; };
 		F77DEC601DD8977100D6EABA /* VKTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKTrack.swift; sourceTree = "<group>"; };
+		F77DEC641DD8982500D6EABA /* VKTracksSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKTracksSource.swift; sourceTree = "<group>"; };
 		F7D30C561DD86CFE00821B17 /* VKController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKController.swift; sourceTree = "<group>"; };
 		F7D30C581DD86DA300821B17 /* ConvenienceServiceRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvenienceServiceRequest.swift; sourceTree = "<group>"; };
 		F7D30C5A1DD86E2C00821B17 /* VKTracksRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKTracksRequest.swift; sourceTree = "<group>"; };
@@ -361,6 +363,7 @@
 			isa = PBXGroup;
 			children = (
 				F77DEC601DD8977100D6EABA /* VKTrack.swift */,
+				F77DEC641DD8982500D6EABA /* VKTracksSource.swift */,
 			);
 			path = VK;
 			sourceTree = "<group>";
@@ -585,6 +588,7 @@
 				F758CC511DC08BA30019975B /* AppConstants.swift in Sources */,
 				F758CC821DC13EAB0019975B /* Storage.swift in Sources */,
 				F758CC901DC147DE0019975B /* PlaylistsSource.swift in Sources */,
+				F77DEC651DD8982500D6EABA /* VKTracksSource.swift in Sources */,
 				F758CBF41DC02D4A0019975B /* AppDelegate.swift in Sources */,
 				F758CC7C1DC13D840019975B /* AudioFeatures.swift in Sources */,
 				F758CC681DC0D1000019975B /* TracksRepresentation.swift in Sources */,

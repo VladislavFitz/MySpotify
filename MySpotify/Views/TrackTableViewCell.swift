@@ -15,15 +15,17 @@ class TrackTableViewCell: UITableViewCell {
     @IBOutlet weak var bpmLabel: UILabel!
     
     
-    func configureWith(track: SPTTrack) {
+    func configureWith(track: Track) {
         titleLabel.text = track.title
-        artistLabel.text = track.artists.map({ $0.name }).joined(separator: ", ")
+        artistLabel.text = ""
+        bpmLabel.text = ""
+//        artistLabel.text = track.artists.map({ $0.name }).joined(separator: ", ")
         
-        if let tempo = track.tempo {
-            bpmLabel.text = String(format: "%.0fbpm", arguments: [tempo])
-        } else {
-            bpmLabel.text = ""
-        }
+//        if let tempo = track.tempo {
+//            bpmLabel.text = String(format: "%.0fbpm", arguments: [tempo])
+//        } else {
+//            bpmLabel.text = ""
+//        }
     }
     
 }
