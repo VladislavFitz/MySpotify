@@ -14,13 +14,37 @@ class VKController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
+        view.backgroundColor = .green
         VKSdk.instance().register(self)
         VKSdk.instance().uiDelegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        authorize()
+        
+        let button = UIButton(type: .contactAdd)
+        button.addTarget(self, action: #selector(showTracks), for: .touchUpInside)
+        view.addSubview(button)
+        button.autoCenterInSuperview()
+        
+    }
+    
+    func showTracks() {
+        guard let userID = VKSdk.accessToken().userId else {
+            return
+        }
+        
+        let tracksSource = VKTracksSource(ownerID: String(userID))
+        let tracksViewController = TracksViewController(source: tracksSource)
+        tracksViewController.title = "All audios"
+        tracksViewController.source = tracksSource
+        
+        navigationController?.pushViewController(tracksViewController, animated: true)
+    }
+    
+    func authorize() {
         
         VKSdk.wakeUpSession(["audio"]) { (authorizationState, error) in
             if let error = error {
@@ -37,7 +61,6 @@ class VKController: UIViewController {
         
     }
     
-    
 }
 
 extension VKController: VKSdkDelegate {
@@ -47,15 +70,6 @@ extension VKController: VKSdkDelegate {
     }
     
     func vkSdkAuthorizationStateUpdated(with result: VKAuthorizationResult!) {
-        guard let userID = result?.user?.id?.intValue else {
-            return
-        }
-        
-        let tracksSource = VKTracksSource(ownerID: String(userID))
-        let tracksViewController = TracksViewController(source: tracksSource)
-        tracksViewController.title = "All audios"
-        tracksViewController.source = tracksSource
-        navigationController?.pushViewController(tracksViewController, animated: true)
         
     }
     

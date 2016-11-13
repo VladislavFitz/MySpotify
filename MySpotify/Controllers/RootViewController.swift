@@ -25,7 +25,6 @@ class RootViewController: UITabBarController {
         viewControllers?.removeAll()
         
         let vkController = VKController().embeddedInNavigationController
-        vkController.view.backgroundColor = .green
         vkController.tabBarItem.image = UIImage(named: "vk")
         
         let spotifyController = UIStoryboard(name: "Spotify", bundle: .none).instantiateInitialViewController()

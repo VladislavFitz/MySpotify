@@ -11,7 +11,7 @@ import Foundation
 extension UIViewController {
     
     var embeddedInNavigationController: UINavigationController {
-        return embeddedInNavigationController(modalPresentationStyle: .fullScreen)
+        return embeddedInNavigationController(modalPresentationStyle: .overFullScreen)
     }
     
     func embeddedInNavigationController(modalPresentationStyle: UIModalPresentationStyle) -> UINavigationController {
