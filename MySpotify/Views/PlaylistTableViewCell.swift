@@ -13,9 +13,9 @@ class PlaylistTableViewCell: UITableViewCell, ReusableView, NibLoadableView {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var countLabel: UILabel!
     
-    func configureWith(playlist: Playlist) {
-        titleLabel.text = playlist.name
-        countLabel.text = "\(playlist.tracks.count) tracks"
+    func configureWith(playlist: SPTPlaylist) {
+        titleLabel.text = playlist.title
+        countLabel.text = "\(playlist.tracksRepresentation.count) tracks"
     }
     
 }

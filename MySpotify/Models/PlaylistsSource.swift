@@ -10,9 +10,9 @@ import Foundation
 
 class PlaylistsSource: RefreshableItemsSource {
     
-    typealias ItemType = Playlist
+    typealias ItemType = SPTPlaylist
     
-    var items: [Playlist] {
+    var items: [SPTPlaylist] {
         return Storage.sharedInstance.playlists
     }
     

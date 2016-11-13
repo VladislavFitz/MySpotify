@@ -18,8 +18,8 @@ struct SPTTracksRequest: ServiceRequest {
     let method: Alamofire.HTTPMethod
     let headers: Alamofire.HTTPHeaders
     
-    init?(playlist: Playlist) {
-        if case .url(let tracksURL, count: _) = playlist.tracks {
+    init?(playlist: SPTPlaylist) {
+        if case .url(let tracksURL, count: _) = playlist.tracksRepresentation {
             self.url = tracksURL
             self.method = .get
             self.headers =  ["Authorization": UserSession.session.currentToken!.headerValue]

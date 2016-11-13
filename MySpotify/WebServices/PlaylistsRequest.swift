@@ -11,7 +11,7 @@ import Alamofire
 
 struct PlaylistsRequest: ServiceRequest {
     
-    typealias ResultType = ListWrapper<Playlist>
+    typealias ResultType = ListWrapper<SPTPlaylist>
     
     let url: String
     let method: Alamofire.HTTPMethod

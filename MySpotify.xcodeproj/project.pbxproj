@@ -30,7 +30,7 @@
 		F758CC601DC0CDFB0019975B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC5F1DC0CDFB0019975B /* User.swift */; };
 		F758CC621DC0CE210019975B /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC611DC0CE210019975B /* UserTests.swift */; };
 		F758CC641DC0CEFB0019975B /* UserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC631DC0CEFB0019975B /* UserRequest.swift */; };
-		F758CC661DC0D0F70019975B /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC651DC0D0F70019975B /* Playlist.swift */; };
+		F758CC661DC0D0F70019975B /* SPTPlaylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC651DC0D0F70019975B /* SPTPlaylist.swift */; };
 		F758CC681DC0D1000019975B /* TracksRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC671DC0D1000019975B /* TracksRepresentation.swift */; };
 		F758CC6C1DC0D12C0019975B /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC6B1DC0D12C0019975B /* Artist.swift */; };
 		F758CC6E1DC12DE00019975B /* ArtistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F758CC6D1DC12DE00019975B /* ArtistTests.swift */; };
@@ -65,6 +65,8 @@
 		F77DEC6F1DD8AD3200D6EABA /* UICollectionView+Reuse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77DEC6E1DD8AD3200D6EABA /* UICollectionView+Reuse.swift */; };
 		F77DEC711DD8AD4100D6EABA /* UITableView+Reuse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77DEC701DD8AD4100D6EABA /* UITableView+Reuse.swift */; };
 		F77DEC731DD8B62A00D6EABA /* UIViewController+NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77DEC721DD8B62A00D6EABA /* UIViewController+NavigationController.swift */; };
+		F77DEC751DD8CDF700D6EABA /* VKPlaylistsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77DEC741DD8CDF700D6EABA /* VKPlaylistsRequest.swift */; };
+		F77DEC771DD8CF7000D6EABA /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77DEC761DD8CF7000D6EABA /* Playlist.swift */; };
 		F7D30C571DD86CFE00821B17 /* VKController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D30C561DD86CFE00821B17 /* VKController.swift */; };
 		F7D30C591DD86DA300821B17 /* ConvenienceServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D30C581DD86DA300821B17 /* ConvenienceServiceRequest.swift */; };
 		F7D30C5B1DD86E2C00821B17 /* VKTracksRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D30C5A1DD86E2C00821B17 /* VKTracksRequest.swift */; };
@@ -115,7 +117,7 @@
 		F758CC5F1DC0CDFB0019975B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F758CC611DC0CE210019975B /* UserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
 		F758CC631DC0CEFB0019975B /* UserRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRequest.swift; sourceTree = "<group>"; };
-		F758CC651DC0D0F70019975B /* Playlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
+		F758CC651DC0D0F70019975B /* SPTPlaylist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTPlaylist.swift; sourceTree = "<group>"; };
 		F758CC671DC0D1000019975B /* TracksRepresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracksRepresentation.swift; sourceTree = "<group>"; };
 		F758CC6B1DC0D12C0019975B /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		F758CC6D1DC12DE00019975B /* ArtistTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistTests.swift; sourceTree = "<group>"; };
@@ -150,6 +152,8 @@
 		F77DEC6E1DD8AD3200D6EABA /* UICollectionView+Reuse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reuse.swift"; sourceTree = "<group>"; };
 		F77DEC701DD8AD4100D6EABA /* UITableView+Reuse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Reuse.swift"; sourceTree = "<group>"; };
 		F77DEC721DD8B62A00D6EABA /* UIViewController+NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+NavigationController.swift"; sourceTree = "<group>"; };
+		F77DEC741DD8CDF700D6EABA /* VKPlaylistsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKPlaylistsRequest.swift; sourceTree = "<group>"; };
+		F77DEC761DD8CF7000D6EABA /* Playlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
 		F7D30C561DD86CFE00821B17 /* VKController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKController.swift; sourceTree = "<group>"; };
 		F7D30C581DD86DA300821B17 /* ConvenienceServiceRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvenienceServiceRequest.swift; sourceTree = "<group>"; };
 		F7D30C5A1DD86E2C00821B17 /* VKTracksRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKTracksRequest.swift; sourceTree = "<group>"; };
@@ -304,7 +308,8 @@
 				F77DEC5F1DD8977100D6EABA /* VK */,
 				F758CC541DC0C41E0019975B /* Token.swift */,
 				F758CC5F1DC0CDFB0019975B /* User.swift */,
-				F758CC651DC0D0F70019975B /* Playlist.swift */,
+				F758CC651DC0D0F70019975B /* SPTPlaylist.swift */,
+				F77DEC761DD8CF7000D6EABA /* Playlist.swift */,
 				F758CC671DC0D1000019975B /* TracksRepresentation.swift */,
 				F758CC6B1DC0D12C0019975B /* Artist.swift */,
 				F758CC751DC13C850019975B /* ListWrapper.swift */,
@@ -357,6 +362,7 @@
 				F758CC771DC13CA80019975B /* PlaylistsRequest.swift */,
 				F758CC791DC13CCF0019975B /* SPTTracksRequest.swift */,
 				F7D30C5A1DD86E2C00821B17 /* VKTracksRequest.swift */,
+				F77DEC741DD8CDF700D6EABA /* VKPlaylistsRequest.swift */,
 				F758CC7F1DC13DD40019975B /* AudioFeaturesRequest.swift */,
 			);
 			path = WebServices;
@@ -620,8 +626,10 @@
 				F758CC7C1DC13D840019975B /* AudioFeatures.swift in Sources */,
 				F758CC681DC0D1000019975B /* TracksRepresentation.swift in Sources */,
 				F758CC8A1DC146A20019975B /* TracksViewController.swift in Sources */,
+				F77DEC751DD8CDF700D6EABA /* VKPlaylistsRequest.swift in Sources */,
 				F7D30C571DD86CFE00821B17 /* VKController.swift in Sources */,
-				F758CC661DC0D0F70019975B /* Playlist.swift in Sources */,
+				F758CC661DC0D0F70019975B /* SPTPlaylist.swift in Sources */,
+				F77DEC771DD8CF7000D6EABA /* Playlist.swift in Sources */,
 				F77DEC591DD8936600D6EABA /* Track.swift in Sources */,
 				F758CC641DC0CEFB0019975B /* UserRequest.swift in Sources */,
 				F758CC7A1DC13CCF0019975B /* SPTTracksRequest.swift in Sources */,

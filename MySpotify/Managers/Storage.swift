@@ -12,7 +12,7 @@ class Storage: NSObject {
     
     static let sharedInstance = Storage()
     
-    var playlists: [Playlist] = []
+    var playlists: [SPTPlaylist] = []
     
     private override init() {}
     
@@ -29,7 +29,7 @@ class Storage: NSObject {
             return []
         }
         
-        switch playlist.tracks {
+        switch playlist.tracksRepresentation {
         case .tracks(let tracks):
             return tracks
             
@@ -92,7 +92,7 @@ class Storage: NSObject {
         
     }
     
-    private func store(playlists: [Playlist]) {
+    private func store(playlists: [SPTPlaylist]) {
         var updatedUser = UserSession.session.user
         updatedUser?.playlists = playlists
         UserSession.session.user = updatedUser
@@ -102,7 +102,7 @@ class Storage: NSObject {
         
         if let playlistIndex = self.playlists.index(where: { $0.id == playlistID }) {
             var updatedPlaylist = self.playlists.remove(at: playlistIndex)
-            updatedPlaylist.tracks = .tracks(tracks)
+            updatedPlaylist.tracksRepresentation = .tracks(tracks)
             var updatedPlaylists = self.playlists
             updatedPlaylists.insert(updatedPlaylist, at: playlistIndex)
             store(playlists: updatedPlaylists)

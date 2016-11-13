@@ -13,7 +13,7 @@ struct User {
     
     let id: String
     let name: String?
-    var playlists: [Playlist] = []
+    var playlists: [SPTPlaylist] = []
     
 }
 
@@ -35,7 +35,7 @@ extension User: DictionaryRepresentable{
         {
             self.id = id as String
             self.name = dictionary["name"] as? String
-            self.playlists = playlistsDictionaries.flatMap({ Playlist(dictionary: $0) })
+            self.playlists = playlistsDictionaries.flatMap({ SPTPlaylist(dictionary: $0) })
         } else {
             return nil
         }
