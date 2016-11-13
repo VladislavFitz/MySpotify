@@ -8,7 +8,7 @@
 
 import Foundation
 
-class PlaylistTableViewCell: UITableViewCell {
+class PlaylistTableViewCell: UITableViewCell, ReusableView, NibLoadableView {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var countLabel: UILabel!

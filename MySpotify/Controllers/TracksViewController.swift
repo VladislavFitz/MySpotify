@@ -8,12 +8,14 @@
 
 import Foundation
 
-class TracksViewController: UITableViewController {
+class TracksViewController<TracksSource: RefreshableTracksSource>: UITableViewController {
     
-    var source: SPTTracksSource!
+    var source: TracksSource!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.register(TrackTableViewCell.self)
         
         refreshControl = UIRefreshControl()
         refreshControl?.addTarget(self, action: #selector(refresh), for: .valueChanged)
@@ -45,25 +47,17 @@ class TracksViewController: UITableViewController {
         
     }
     
-}
-
-//MARK: - UITableViewDataSource
-
-extension TracksViewController {
+    //MARK: - UITableViewDataSource
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return source.items.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeueReusableCell(withIdentifier: "TrackTableViewCell", for: indexPath)
+        return tableView.dequeueReusableCell(forIndexPath: indexPath) as TrackTableViewCell
     }
     
-}
-
-//MARK: - UITableViewDelegate
-
-extension TracksViewController {
+    //MARK: - UITableViewDelegate
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if let trackCell = cell as? TrackTableViewCell {

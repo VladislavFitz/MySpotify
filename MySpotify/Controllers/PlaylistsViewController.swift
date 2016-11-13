@@ -33,27 +33,6 @@ class PlaylistsViewController: UITableViewController {
         
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch segue.identifier {
-        case PlaylistsViewController.showTracksSegue?:
-            guard let tracksViewController = segue.destination as? TracksViewController else {
-                return
-            }
-            
-            guard let selectedPlaylistIndex = tableView.indexPathForSelectedRow?.row else {
-                return
-            }
-            
-            let playlist = source.items[selectedPlaylistIndex]
-            
-            tracksViewController.title = playlist.name
-            tracksViewController.source = SPTTracksSource(playlistID: playlist.id)
-            
-        default:
-            break
-        }
-    }
-    
     func refresh() {
         
         refreshControl?.beginRefreshing()
@@ -122,6 +101,18 @@ extension PlaylistsViewController {
     
     override func tableView(_ tableView: UITableView, targetIndexPathForMoveFromRowAt sourceIndexPath: IndexPath, toProposedIndexPath proposedDestinationIndexPath: IndexPath) -> IndexPath {
         return proposedDestinationIndexPath
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let playlist = source.items[indexPath.row]
+        
+        let tracksViewController = TracksViewController<SPTTracksSource>()
+        
+        tracksViewController.title = playlist.name
+        tracksViewController.source = SPTTracksSource(playlistID: playlist.id)
+        
+        navigationController?.pushViewController(tracksViewController, animated: true)
     }
     
 }

@@ -48,7 +48,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LON-HX-vTd" id="Aa0-jJ-mAg">
-                                    <frame key="frameInset" width="342" height="79"/>
+                                    <frame key="frameInset" width="342" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metallica - The Best" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fkn-4W-Eus">
@@ -76,9 +76,6 @@
                                 <connections>
                                     <outlet property="countLabel" destination="1Og-XN-xVA" id="Lr1-Z7-ZDA"/>
                                     <outlet property="titleLabel" destination="Fkn-4W-Eus" id="6WD-CQ-w7o"/>
-                                    <segue destination="oGY-Nc-DE5" kind="show" identifier="ShowTracks" id="ldN-1T-LnG">
-                                        <nil key="action"/>
-                                    </segue>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -92,66 +89,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MfX-Av-b35" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3120.8000000000002" y="130.88455772113943"/>
-        </scene>
-        <!--Tracks View Controller-->
-        <scene sceneID="QA1-mA-DI8">
-            <objects>
-                <tableViewController id="oGY-Nc-DE5" customClass="TracksViewController" customModule="MySpotify" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" sectionHeaderHeight="28" sectionFooterHeight="28" id="aXN-5q-9p5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TrackTableViewCell" rowHeight="85" id="lsW-Gr-qUg" customClass="TrackTableViewCell" customModule="MySpotify" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="375" height="85"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lsW-Gr-qUg" id="NN7-vM-5bH">
-                                    <frame key="frameInset" width="375" height="84"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Leaf Clover" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nz1-QA-frr">
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metallica" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rx7-s4-LYl">
-                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120bpm" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e19-ZW-8op">
-                                            <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="rx7-s4-LYl" firstAttribute="top" secondItem="Nz1-QA-frr" secondAttribute="bottom" constant="4" id="0YT-mi-1mA"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="e19-ZW-8op" secondAttribute="trailing" constant="6" id="9ZQ-02-9ER"/>
-                                        <constraint firstItem="e19-ZW-8op" firstAttribute="centerY" secondItem="NN7-vM-5bH" secondAttribute="centerY" id="ASP-JO-8fx"/>
-                                        <constraint firstAttribute="leadingMargin" secondItem="Nz1-QA-frr" secondAttribute="leading" id="CtJ-nZ-qGp"/>
-                                        <constraint firstAttribute="topMargin" secondItem="Nz1-QA-frr" secondAttribute="top" id="Xbs-6D-aoG"/>
-                                        <constraint firstItem="e19-ZW-8op" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rx7-s4-LYl" secondAttribute="trailing" constant="5" id="YNU-4r-fzo"/>
-                                        <constraint firstItem="e19-ZW-8op" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Nz1-QA-frr" secondAttribute="trailing" constant="5" id="ixk-P0-2DC"/>
-                                        <constraint firstItem="rx7-s4-LYl" firstAttribute="leading" secondItem="Nz1-QA-frr" secondAttribute="leading" id="j9C-Ve-vWW"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="artistLabel" destination="rx7-s4-LYl" id="5ti-FJ-lr2"/>
-                                    <outlet property="bpmLabel" destination="e19-ZW-8op" id="D72-ha-gaq"/>
-                                    <outlet property="titleLabel" destination="Nz1-QA-frr" id="Rdr-q4-Oaw"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="oGY-Nc-DE5" id="rqQ-d3-qZ7"/>
-                            <outlet property="delegate" destination="oGY-Nc-DE5" id="eNl-7v-Rmb"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xoB-GA-Uoe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4172" y="130.88455772113943"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="U8o-87-hnn">

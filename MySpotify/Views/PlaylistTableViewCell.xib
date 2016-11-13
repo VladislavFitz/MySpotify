@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PlaylistTableViewCell" rowHeight="80" id="BQu-4a-dum" customClass="PlaylistTableViewCell" customModule="MySpotify" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BQu-4a-dum" id="Xo2-jB-D2T">
+                <frame key="frameInset" width="342" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metallica - The Best" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifc-Ei-FFh">
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 tracks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G0C-I1-SVO">
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="G0C-I1-SVO" firstAttribute="leading" secondItem="ifc-Ei-FFh" secondAttribute="leading" id="EuG-4g-DHY"/>
+                    <constraint firstAttribute="topMargin" secondItem="ifc-Ei-FFh" secondAttribute="top" id="H9D-WQ-BhK"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="ifc-Ei-FFh" secondAttribute="leading" id="Zam-mk-t2e"/>
+                    <constraint firstItem="G0C-I1-SVO" firstAttribute="top" secondItem="ifc-Ei-FFh" secondAttribute="bottom" constant="3" id="cd3-Uy-2Ud"/>
+                </constraints>
+            </tableViewCellContentView>
+            <constraints>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ifc-Ei-FFh" secondAttribute="trailing" constant="30" id="64q-Em-Il1"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="G0C-I1-SVO" secondAttribute="trailing" constant="25" id="vi5-4a-NaR"/>
+            </constraints>
+            <connections>
+                <outlet property="countLabel" destination="G0C-I1-SVO" id="OLX-6g-Iko"/>
+                <outlet property="titleLabel" destination="ifc-Ei-FFh" id="hM0-xa-2TO"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

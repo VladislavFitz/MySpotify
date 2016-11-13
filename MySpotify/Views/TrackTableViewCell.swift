@@ -8,7 +8,7 @@
 
 import Foundation
 
-class TrackTableViewCell: UITableViewCell {
+class TrackTableViewCell: UITableViewCell, ReusableView, NibLoadableView {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var artistLabel: UILabel!

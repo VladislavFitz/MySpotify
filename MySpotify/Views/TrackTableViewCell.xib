@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TrackTableViewCell" rowHeight="85" id="71H-IO-pSj" customClass="TrackTableViewCell" customModule="MySpotify" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="71H-IO-pSj" id="kBf-Xj-g2w">
+                <frame key="frameInset" width="375" height="85"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Leaf Clover" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5W-gc-gem">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metallica" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bW9-G8-gPf">
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120bpm" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B8I-QL-XiL">
+                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="B8I-QL-XiL" secondAttribute="trailing" constant="6" id="1cw-6c-fZ1"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="a5W-gc-gem" secondAttribute="leading" id="2pg-7n-ysa"/>
+                    <constraint firstItem="B8I-QL-XiL" firstAttribute="centerY" secondItem="kBf-Xj-g2w" secondAttribute="centerY" id="DEm-x8-HzO"/>
+                    <constraint firstItem="B8I-QL-XiL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="a5W-gc-gem" secondAttribute="trailing" constant="5" id="FQY-w6-eKO"/>
+                    <constraint firstItem="bW9-G8-gPf" firstAttribute="top" secondItem="a5W-gc-gem" secondAttribute="bottom" constant="4" id="IgQ-La-2dw"/>
+                    <constraint firstAttribute="topMargin" secondItem="a5W-gc-gem" secondAttribute="top" id="q09-MP-EUe"/>
+                    <constraint firstItem="bW9-G8-gPf" firstAttribute="leading" secondItem="a5W-gc-gem" secondAttribute="leading" id="uLV-NG-PjJ"/>
+                    <constraint firstItem="B8I-QL-XiL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bW9-G8-gPf" secondAttribute="trailing" constant="5" id="zyh-U9-xCf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="artistLabel" destination="bW9-G8-gPf" id="oMS-Me-ZPg"/>
+                <outlet property="bpmLabel" destination="B8I-QL-XiL" id="VcW-Df-Jsx"/>
+                <outlet property="titleLabel" destination="a5W-gc-gem" id="pfn-NR-KQJ"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
