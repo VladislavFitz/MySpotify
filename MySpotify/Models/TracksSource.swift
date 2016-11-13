@@ -10,11 +10,11 @@ import Foundation
 
 class TracksSource: RefreshableItemsSource {
     
-    typealias ItemType = Track
+    typealias ItemType = SPTTrack
     
     let playlistID: String
     
-    var items: [Track] {
+    var items: [SPTTrack] {
         return Storage.sharedInstance.tracks(forPlaylistWithID: playlistID)
     }
     

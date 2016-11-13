@@ -12,7 +12,7 @@ import Unbox
 enum TracksRepresentation {
     
     case url(String, count: Int)
-    case tracks([Track])
+    case tracks([SPTTrack])
     
     var count: Int {
         switch self {
@@ -30,7 +30,7 @@ extension TracksRepresentation: DictionaryRepresentable {
     
     init?(dictionary: NSDictionary) {
         if let tracksDictionaries = dictionary["tracks"] as? [NSDictionary] {
-            let tracks = tracksDictionaries.flatMap({ Track(dictionary: $0) })
+            let tracks = tracksDictionaries.flatMap({ SPTTrack(dictionary: $0) })
             self = .tracks(tracks)
         } else if
             let tracksURL = dictionary["tracks_url"] as? NSString,

@@ -1,5 +1,5 @@
 //
-//  Track.swift
+//  SPTTrack.swift
 //  MySpotify
 //
 //  Created by Vladislav Fitc on 26.10.16.
@@ -9,7 +9,7 @@
 import Foundation
 import Unbox
 
-struct Track {
+struct SPTTrack: Track {
     
     let id: String
     let title: String
@@ -18,7 +18,7 @@ struct Track {
     
 }
 
-extension Track: CustomStringConvertible {
+extension SPTTrack: CustomStringConvertible {
     
     var description: String {
         return "\(title) - \(artists.map({ $0.name }).joined(separator: " ,"))"
@@ -26,7 +26,7 @@ extension Track: CustomStringConvertible {
     
 }
 
-extension Track: Unboxable {
+extension SPTTrack: Unboxable {
     
     init(unboxer: Unboxer) throws {
         self.id = try unboxer.unbox(keyPath: "track.id")
@@ -36,7 +36,7 @@ extension Track: Unboxable {
     
 }
 
-extension Track: DictionaryRepresentable{
+extension SPTTrack: DictionaryRepresentable{
     
     init?(dictionary: NSDictionary) {
         if

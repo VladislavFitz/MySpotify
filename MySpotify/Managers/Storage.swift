@@ -23,7 +23,7 @@ class Storage: NSObject {
         store(playlists: updatedPlaylists)
     }
     
-    func tracks(forPlaylistWithID playlistID: String) -> [Track] {
+    func tracks(forPlaylistWithID playlistID: String) -> [SPTTrack] {
         
         guard let playlist = playlists.filter({ $0.id == playlistID }).first else {
             return []
@@ -59,7 +59,7 @@ class Storage: NSObject {
         
         guard let user = UserSession.session.user else { return }
         
-        TracksRequest(userID: user.id, playlistID: playlistID).perform() { result in
+        SPTTracksRequest(userID: user.id, playlistID: playlistID).perform() { result in
             
             switch result {
             case .failure(let error):
@@ -74,7 +74,7 @@ class Storage: NSObject {
                         completion(error)
                         
                     case .success(let featuresWrapper):
-                        let tracksWithFeatures = zip(tracks, featuresWrapper.audioFeatures).map { (track, features) -> Track in
+                        let tracksWithFeatures = zip(tracks, featuresWrapper.audioFeatures).map { (track, features) -> SPTTrack in
                             var mutatedTrack = track
                             mutatedTrack.tempo = features.tempo
                             return mutatedTrack
@@ -98,7 +98,7 @@ class Storage: NSObject {
         UserSession.session.user = updatedUser
     }
     
-    private func store(tracks: [Track], forPlaylistWithID playlistID: String) {
+    private func store(tracks: [SPTTrack], forPlaylistWithID playlistID: String) {
         
         if let playlistIndex = self.playlists.index(where: { $0.id == playlistID }) {
             var updatedPlaylist = self.playlists.remove(at: playlistIndex)

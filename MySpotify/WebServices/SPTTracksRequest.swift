@@ -1,5 +1,5 @@
 //
-//  TracksRequest.swift
+//  SPTTracksRequest.swift
 //  MySpotify
 //
 //  Created by Vladislav Fitc on 26.10.16.
@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import Unbox
 
-struct TracksRequest: ServiceRequest {
+struct SPTTracksRequest: ServiceRequest {
     
     typealias ResultType = ListWrapper<SPTTrack>
     

@@ -9,7 +9,7 @@
 import Foundation
 import Unbox
 
-struct VKTrack {
+struct VKTrack: Track {
     
     let id: String
     let duration: Int

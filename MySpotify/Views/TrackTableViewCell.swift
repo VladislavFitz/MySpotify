@@ -15,7 +15,7 @@ class TrackTableViewCell: UITableViewCell {
     @IBOutlet weak var bpmLabel: UILabel!
     
     
-    func configureWith(track: Track) {
+    func configureWith(track: SPTTrack) {
         titleLabel.text = track.title
         artistLabel.text = track.artists.map({ $0.name }).joined(separator: ", ")
         
