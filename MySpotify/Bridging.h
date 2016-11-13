@@ -7,4 +7,4 @@
 //
 
 #import <SpotifyAuthentication/SpotifyAuthentication.h>
-#import <VK-ios-sdk/VKSdk.h>
+//#import <VK-ios-sdk/VKSdk.h>

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import VK_ios_sdk
+import Unbox
 
 class MainViewController: UIViewController {
 
@@ -16,7 +18,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         NotificationCenter.default.addObserver(self, selector: #selector(tokenUpdated), name: Notification.Name(rawValue: UserSession.TokenUpdatedNotification), object: .none)
 
     }
@@ -24,17 +26,17 @@ class MainViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        if UserSession.session.user != nil {
-            
-            presentUserPlaylists()
-            
-        } else if let token = UserSession.session.currentToken, !token.expired {
-            
-            requestUser(successCompletion: presentUserPlaylists)
-            
-        } else {
-            requestTokenCode()
-        }
+//        if UserSession.session.user != nil {
+//            
+//            presentUserPlaylists()
+//            
+//        } else if let token = UserSession.session.currentToken, !token.expired {
+//            
+//            requestUser(successCompletion: presentUserPlaylists)
+//            
+//        } else {
+//            requestTokenCode()
+//        }
 
     }
     
@@ -72,6 +74,7 @@ class MainViewController: UIViewController {
         performSegue(withIdentifier: "PresentPlaylists", sender: self)
     }
 
-
 }
+
+
 
