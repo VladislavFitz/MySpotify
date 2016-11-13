@@ -10,21 +10,12 @@ import Foundation
 import Alamofire
 import Unbox
 
-enum ServiceRequestResult<ResultType> {
-    case success(ResultType)
-    case failure(Error)
-}
-
-protocol ServiceRequest {
-    
-    associatedtype ResultType
+protocol ServiceRequest: ConvenienceServiceRequest {
     
     var url: String { get }
     var method: Alamofire.HTTPMethod { get }
     var headers: Alamofire.HTTPHeaders { get }
     var parameters: Alamofire.Parameters { get }
-    
-    func perform(resultHandler: @escaping (ServiceRequestResult<ResultType>) -> Void)
     
 }
 
