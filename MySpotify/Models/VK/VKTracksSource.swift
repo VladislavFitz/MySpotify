@@ -17,7 +17,7 @@ class VKTracksSource: RefreshableTracksSource {
 
     var items: [VKTrack] = []
     
-    init(ownerID: String, albumID: String?) {
+    init(ownerID: String, albumID: String? = .none) {
         self.ownerID = ownerID
         self.albumID = albumID
     }

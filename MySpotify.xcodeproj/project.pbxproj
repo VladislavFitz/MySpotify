@@ -64,6 +64,7 @@
 		F77DEC6D1DD8AC4700D6EABA /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77DEC6C1DD8AC4700D6EABA /* NibLoadableView.swift */; };
 		F77DEC6F1DD8AD3200D6EABA /* UICollectionView+Reuse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77DEC6E1DD8AD3200D6EABA /* UICollectionView+Reuse.swift */; };
 		F77DEC711DD8AD4100D6EABA /* UITableView+Reuse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77DEC701DD8AD4100D6EABA /* UITableView+Reuse.swift */; };
+		F77DEC731DD8B62A00D6EABA /* UIViewController+NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77DEC721DD8B62A00D6EABA /* UIViewController+NavigationController.swift */; };
 		F7D30C571DD86CFE00821B17 /* VKController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D30C561DD86CFE00821B17 /* VKController.swift */; };
 		F7D30C591DD86DA300821B17 /* ConvenienceServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D30C581DD86DA300821B17 /* ConvenienceServiceRequest.swift */; };
 		F7D30C5B1DD86E2C00821B17 /* VKTracksRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D30C5A1DD86E2C00821B17 /* VKTracksRequest.swift */; };
@@ -148,6 +149,7 @@
 		F77DEC6C1DD8AC4700D6EABA /* NibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
 		F77DEC6E1DD8AD3200D6EABA /* UICollectionView+Reuse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reuse.swift"; sourceTree = "<group>"; };
 		F77DEC701DD8AD4100D6EABA /* UITableView+Reuse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Reuse.swift"; sourceTree = "<group>"; };
+		F77DEC721DD8B62A00D6EABA /* UIViewController+NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+NavigationController.swift"; sourceTree = "<group>"; };
 		F7D30C561DD86CFE00821B17 /* VKController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKController.swift; sourceTree = "<group>"; };
 		F7D30C581DD86DA300821B17 /* ConvenienceServiceRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvenienceServiceRequest.swift; sourceTree = "<group>"; };
 		F7D30C5A1DD86E2C00821B17 /* VKTracksRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKTracksRequest.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				F758CC851DC1440A0019975B /* UIViewController+Error.swift */,
+				F77DEC721DD8B62A00D6EABA /* UIViewController+NavigationController.swift */,
 				F706EFC31DC15D8A0078FAF4 /* NSError+Description.swift */,
 				F77DEC6E1DD8AD3200D6EABA /* UICollectionView+Reuse.swift */,
 				F77DEC701DD8AD4100D6EABA /* UITableView+Reuse.swift */,
@@ -596,6 +599,7 @@
 				F758CC4F1DC08B6A0019975B /* SpotifyViewController.swift in Sources */,
 				F758CC551DC0C41E0019975B /* Token.swift in Sources */,
 				F77DEC5B1DD896A200D6EABA /* RefreshableTracksSource.swift in Sources */,
+				F77DEC731DD8B62A00D6EABA /* UIViewController+NavigationController.swift in Sources */,
 				F758CC5E1DC0C9C80019975B /* DictionaryRepresentable.swift in Sources */,
 				F758CC531DC0C39F0019975B /* ServiceRequest.swift in Sources */,
 				F758CC8E1DC147260019975B /* TrackTableViewCell.swift in Sources */,

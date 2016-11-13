@@ -107,10 +107,10 @@ extension PlaylistsViewController {
         
         let playlist = source.items[indexPath.row]
         
-        let tracksViewController = TracksViewController<SPTTracksSource>()
+        let tracksSource = SPTTracksSource(playlistID: playlist.id)
+        let tracksViewController = TracksViewController(source: tracksSource)
         
         tracksViewController.title = playlist.name
-        tracksViewController.source = SPTTracksSource(playlistID: playlist.id)
         
         navigationController?.pushViewController(tracksViewController, animated: true)
     }

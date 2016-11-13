@@ -11,6 +11,16 @@ import Foundation
 class TracksViewController<TracksSource: RefreshableTracksSource>: UITableViewController {
     
     var source: TracksSource!
+    
+    init(source: TracksSource) {
+        self.source = source
+        super.init(style: .grouped)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        self.source = nil
+        super.init(coder: aDecoder)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

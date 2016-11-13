@@ -14,7 +14,7 @@ class VKController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.backgroundColor = .blue
         VKSdk.instance().register(self)
         VKSdk.instance().uiDelegate = self
     }
@@ -43,6 +43,19 @@ class VKController: UIViewController {
 extension VKController: VKSdkDelegate {
     
     public func vkSdkAccessAuthorizationFinished(with result: VKAuthorizationResult!) {
+
+    }
+    
+    func vkSdkAuthorizationStateUpdated(with result: VKAuthorizationResult!) {
+        guard let userID = result?.user?.id?.intValue else {
+            return
+        }
+        
+        let tracksSource = VKTracksSource(ownerID: String(userID))
+        let tracksViewController = TracksViewController(source: tracksSource)
+        tracksViewController.title = "All audios"
+        tracksViewController.source = tracksSource
+        navigationController?.pushViewController(tracksViewController, animated: true)
         
     }
     
