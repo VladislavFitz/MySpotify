@@ -58,6 +58,7 @@
 		F7D30C571DD86CFE00821B17 /* VKController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D30C561DD86CFE00821B17 /* VKController.swift */; };
 		F7D30C591DD86DA300821B17 /* ConvenienceServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D30C581DD86DA300821B17 /* ConvenienceServiceRequest.swift */; };
 		F7D30C5B1DD86E2C00821B17 /* VKTracksRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D30C5A1DD86E2C00821B17 /* VKTracksRequest.swift */; };
+		F7D30C5D1DD8716E00821B17 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D30C5C1DD8716E00821B17 /* RootViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +132,7 @@
 		F7D30C561DD86CFE00821B17 /* VKController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKController.swift; sourceTree = "<group>"; };
 		F7D30C581DD86DA300821B17 /* ConvenienceServiceRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvenienceServiceRequest.swift; sourceTree = "<group>"; };
 		F7D30C5A1DD86E2C00821B17 /* VKTracksRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKTracksRequest.swift; sourceTree = "<group>"; };
+		F7D30C5C1DD8716E00821B17 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +253,7 @@
 		F758CC471DC08B6A0019975B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F7D30C5C1DD8716E00821B17 /* RootViewController.swift */,
 				F758CC481DC08B6A0019975B /* MainViewController.swift */,
 				F7D30C561DD86CFE00821B17 /* VKController.swift */,
 				F758CC871DC146880019975B /* PlaylistsViewController.swift */,
@@ -549,6 +552,7 @@
 				F706EFC41DC15D8A0078FAF4 /* NSError+Description.swift in Sources */,
 				F758CC5C1DC0C95D0019975B /* UserSession.swift in Sources */,
 				F758CC601DC0CDFB0019975B /* User.swift in Sources */,
+				F7D30C5D1DD8716E00821B17 /* RootViewController.swift in Sources */,
 				F758CC6C1DC0D12C0019975B /* Artist.swift in Sources */,
 				F758CC511DC08BA30019975B /* AppConstants.swift in Sources */,
 				F758CC921DC148590019975B /* TracksSource.swift in Sources */,
