@@ -1,5 +1,5 @@
 //
-//  AbstractServiceRequest.swift
+//  ConvenienceServiceRequest.swift
 //  MySpotify
 //
 //  Created by Vladislav Fitc on 13.11.16.
@@ -7,3 +7,16 @@
 //
 
 import Foundation
+
+enum ServiceRequestResult<ResultType> {
+    case success(ResultType)
+    case failure(Error)
+}
+
+protocol ConvenienceServiceRequest {
+
+    associatedtype ResultType
+
+    func perform(resultHandler: @escaping (ServiceRequestResult<ResultType>) -> Void)
+    
+}
